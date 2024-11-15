@@ -117,12 +117,13 @@ int Game::shoot(char tab1[10][10],char tab2[10][10],char tab3[10][10],char tab4[
                 playAgain=newPlayer.showEndScore(playerName1,playerName2,1);
                 if(playAgain==true){
                     Game newGame;
-                    newGame.startGame();
+                    newGame.getPlayerOneInfo(player1,player2);
+                }else{
+                    return 0;
                 }
                 break;
                 
             }
-
         }
         nextshoot=true;
         while(nextshoot==true){
